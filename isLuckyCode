@@ -1,0 +1,14 @@
+boolean isLucky(int n) {
+    String str = Integer.toString(n);
+    String part1 = str.substring(0,str.length()/2);
+    String part2 = str.substring(str.length()/2);
+    int sum1 = 0;
+    int sum2 = 0;
+    for (int i = 0; i < part1.length(); i++) {
+        sum1 += Character.getNumericValue(part1.charAt(i));
+    }
+     for (int i = 0; i < part2.length(); i++) {
+        sum2 += Character.getNumericValue(part2.charAt(i));
+    }
+    return sum1 == sum2;
+}
